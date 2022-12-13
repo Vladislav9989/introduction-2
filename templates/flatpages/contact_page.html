@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+<title>{{ flatpage.title }}</title>
+</head>
+<body>
+     <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Django flatpages</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contacts/">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/double/">Double-text</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/hello/">Kursiv-text</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <p style="font-size: 1.5em;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: center;">Привет, дорогой друг!</p>
+    <p style="font-size: 1.5em; text-align: center;"><br />Поздравляю, ты стал <span style="text-decoration: underline;">зарегистрированным</span> пользователем!</p>
+    <p style="font-size: 1.5em; text-align: center;"><br />Меня зовут <strong>Владислав</strong>, приятно познакомиться!</p>
+    <h2>{{ flatpage.title }}</h2>
+    <hr>
+    <h3>Мои контакты:</h3>
+    {{ flatpage.content }}
+</body>
+</html>
